@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div id="item"><a href="home.html">HOME</a></div>
+        <div id="item"><a href="about.html">ABOUT ME</a></div>
+        <div id="item"><a href="skill.html">SKILL</a></div>
+        <div id="item"><a href="project.html">PROJECT</a></div>
+        <div id="item"><a href="contact.html">CONTACT</a></div>
+    </nav>
+
+    <div class="project">
+        <div class="project">
+            <div class="project-card-wrapper">
+                <div class="project-content">
+                    <img src="./image/1.jpg" alt="Project 1">
+                    <div class="project-title">Pet supplies online store website</div>
+                </div>
+
+                <div class="project-content">
+                    <img src="./image/2.png" alt="Project 2">
+                    <div class="project-title">Food delivery app website</div>
+                </div>
+
+                <div class="project-content">
+                    <img src="./image/3.png" alt="Project 3">
+                    <div class="project-title">Portfolio website</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const projectWrappers = document.querySelectorAll('.project-card-wrapper');
+
+        projectWrappers.forEach(wrapper => {
+            const contents = wrapper.querySelectorAll('.project-content');
+            let currentIndex = 0;
+
+            wrapper.addEventListener('click', () => {
+                contents[currentIndex].style.display = 'none';
+                currentIndex = (currentIndex + 1) % contents.length;
+                contents[currentIndex].style.display = 'flex';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

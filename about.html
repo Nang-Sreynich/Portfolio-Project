@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div id="item"><a href="home.html">HOME</a></div>
+        <div id="item"><a href="about.html">ABOUT ME</a></div>
+        <div id="item"><a href="skill.html">SKILL</a></div>
+        <div id="item"><a href="project.html">PROJECT</a></div>
+        <div id="item"><a href="contact.html">CONTACT</a></div>
+    </nav>
+
+    <div class="about">
+        <div class="about-container">
+            <div class="cards-container">
+
+                <div class="card-wrapper">
+                    <h3 class="card-title">Introduction</h3>
+                    <div class="card">
+                        <img src="./image/first.png" alt="Introduction">
+                        <p class="card-text">
+                            Hello! I'm Jasmine Je, a college student learning front-end web design
+                            and improving my skills through practice.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <h3 class="card-title">Background</h3>
+                    <div class="card">
+                        <img src="./image/second.png" alt="Background">
+                        <p class="card-text">
+                            I am a college student at X University currently learning front-end web design,
+                            focusing on creating simple, user-friendly websites using HTML, CSS, and JavaScript.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <h3 class="card-title">Hobbies</h3>
+                    <div class="card">
+                        <img src="./image/third.png" alt="Hobbies">
+                        <p class="card-text">
+                            In my free time, I enjoy exploring design trends, drawing, and listening to music.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-wrapper">
+                    <h3 class="card-title">Currently</h3>
+                    <div class="card">
+                        <img src="./image/last.png" alt="Currently">
+                        <p class="card-text">
+                            I aim to grow both personally and professionally by collaborating with others
+                            and creating meaningful, authentic work.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => {
+                    if (c !== card) c.classList.remove('active');
+                });
+                card.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

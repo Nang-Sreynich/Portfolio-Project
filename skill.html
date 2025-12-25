@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div id="item"><a href="home.html">HOME</a></div>
+        <div id="item"><a href="about.html">ABOUT ME</a></div>
+        <div id="item"><a href="skill.html">SKILL</a></div>
+        <div id="item"><a href="project.html">PROJECT</a></div>
+        <div id="item"><a href="contact.html">CONTACT</a></div>
+    </nav>
+
+    <div class="skill">
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="./image/one.png" alt="HTML5">
+                </div>
+                <div>
+                    <p class="skill-text">create clean, <br>structured pages</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="./image/two.png" alt="CSS3">
+                </div>
+                <div>
+                    <p class="skill-text">style and layout pages<br> effectively</p>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="./image/tree.png" alt="JavaScript">
+                </div>
+                    <div><p class="skill-text">actively improving my skills</p></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        skillCards.forEach(card => {
+            card.addEventListener('click', () => {
+
+                skillCards.forEach(c => {
+                    if (c !== card) c.classList.remove('active');
+                });
+
+                card.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

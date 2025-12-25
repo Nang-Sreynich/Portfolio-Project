@@ -1,0 +1,30 @@
+/* ===== Responsive adjustments only ===== */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        flex-wrap: wrap; /* allow links to wrap neatly */
+        gap: 10px;
+        padding: 10px 20px;
+    }
+
+    .navbar a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* stack links vertically */
+        align-items: center;
+        gap: 8px;
+        padding: 10px 15px;
+    }
+
+    .navbar a {
+        width: 100%; /* make links full width */
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
